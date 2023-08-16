@@ -34,7 +34,7 @@
             arr.isActive="Available";
     }
     else{
-        arr.isActive="Unavailable";
+        arr.isActive="Not available";
     }
     return arr;
   });
