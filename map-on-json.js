@@ -30,12 +30,20 @@
   ];
 
   const new_p = p.map((currentItem,index,arr) => {
-    if(arr.isActive==true){
-            arr.isActive="Available";
+       if(currentItem.isActive==true){
+        currentItem.isActive="Available";
     }
     else{
-        arr.isActive="Not available";
+        currentItem.isActive="Notavailable";
     }
-    return arr;
+    return currentItem;
   });
-  console.log(p,new_p);
+
+
+  const new_p1 = p.map((item) => ({
+    ...item,
+    isActive: item.isActive ? "Available" : "Not Available",
+  }));
+  console.log("p:",p);
+  //console.log("New_p:",new_p);
+  console.log("New_p1:",new_p1);
